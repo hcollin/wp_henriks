@@ -563,127 +563,261 @@ div#content {
 div#content div.sidebar {
   margin-top: 0;
 }
-/* line 174, ../scss/breakpoints/_1030up.scss */
+/* line 172, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget {
+  padding-left: 35px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 125px;
+}
+/* line 179, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget:first-of-type {
   margin-top: 0;
 }
-/* line 178, ../scss/breakpoints/_1030up.scss */
+/* line 183, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > h4 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #90b0f0;
-  font-family: "Alice", Times New Roman, serif;
-  position: relative;
-  border: none;
-  font-weight: normal;
-  font-size: 24px;
-}
-/* line 188, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget > h4:before {
-  content: '';
   position: absolute;
-  left: -20px;
-  top: 0;
-  background: transparent url("../images/fork.png") no-repeat center top;
-  width: 20px;
-  height: 50px;
-  background-size: 10px 50px;
+  bottom: 0;
+  left: 30px;
+  min-width: 125px;
+  height: 30px;
+  transform-origin: left bottom;
+  transform: rotate(-90deg);
+  padding: 0;
+  margin: 0;
+  border-bottom: dashed 1px #a3b6dd;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 30px;
+  text-align: right;
+  color: #90b0f0;
+  font-weight: normal;
+  letter-spacing: 2px;
 }
-/* line 200, ../scss/breakpoints/_1030up.scss */
+/* line 212, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget {
   margin: 0;
   color: white;
 }
-/* line 206, ../scss/breakpoints/_1030up.scss */
+/* line 218, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget > dl {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
 }
-/* line 212, ../scss/breakpoints/_1030up.scss */
+/* line 224, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget > dl > dt {
   flex: 0 0 auto;
   width: 30%;
   min-width: 50px;
   color: gray;
 }
-/* line 219, ../scss/breakpoints/_1030up.scss */
+/* line 231, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget > dl > dd {
   flex: 0 0 auto;
   width: 70%;
   color: white;
   font-weight: normal;
 }
-/* line 230, ../scss/breakpoints/_1030up.scss */
+/* line 242, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget ul.menu > li {
   position: relative;
 }
-/* line 233, ../scss/breakpoints/_1030up.scss */
+/* line 245, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget ul.menu > li > a {
-  color: #90b0f0;
+  color: #f0d090;
   text-decoration: none;
-  transition: all 0.5s;
+  transition: all 0.3s;
   font-size: 18px;
 }
-/* line 239, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li > a:visited {
-  color: #90b0f0;
-}
-/* line 243, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li > a:hover {
-  color: #b8d8ff;
-  padding-left: 25px;
-}
 /* line 251, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li.current-menu-item > a {
-  padding-left: 25px;
-  transition: all 0.5s;
-  position: relative;
+div#content div.sidebar > .widget ul.menu > li > a:visited {
+  color: #f0d090;
 }
 /* line 256, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li.current-menu-item > a:before {
-  content: '';
-  width: 20px;
-  height: 12px;
-  position: absolute;
-  left: 0;
-  top: 5px;
-  background-image: url("../images/menufork.png");
-  background-position: center center;
-  background-repeat: no-repeat;
+div#content div.sidebar > .widget ul.menu > li > a:hover {
+  color: white;
+  padding-left: 5px;
 }
-/* line 269, ../scss/breakpoints/_1030up.scss */
+/* line 264, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget ul.menu > li.current-menu-item > a {
+  padding-left: 5px;
+  transition: all 0.3s;
+  position: relative;
+  color: #fcf6ea;
+}
+/* line 270, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget ul.menu > li.current-menu-item > a:hover {
-  padding-left: 25px;
+  padding-left: 5px;
 }
-/* line 283, ../scss/breakpoints/_1030up.scss */
+/* line 284, ../scss/breakpoints/_1030up.scss */
 div#content article {
   background-color: transparent;
   border: none;
 }
-/* line 287, ../scss/breakpoints/_1030up.scss */
+/* line 288, ../scss/breakpoints/_1030up.scss */
 div#content article > header, div#content article > section, div#content article > footer {
   border: none;
 }
-/* line 294, ../scss/breakpoints/_1030up.scss */
+/* line 296, ../scss/breakpoints/_1030up.scss */
 div#content article > header > h1, div#content article > header > h1 > a {
   color: #90b0f0;
 }
-/* line 299, ../scss/breakpoints/_1030up.scss */
+/* line 301, ../scss/breakpoints/_1030up.scss */
 div#content article > header > p {
   color: gray;
 }
-/* line 305, ../scss/breakpoints/_1030up.scss */
+/* line 309, ../scss/breakpoints/_1030up.scss */
+div#content article > section h1 {
+  color: #90b0f0;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+/* line 317, ../scss/breakpoints/_1030up.scss */
+div#content article > section h2 {
+  color: #90b0f0;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+/* line 325, ../scss/breakpoints/_1030up.scss */
+div#content article > section h3 {
+  color: #a6c0f3;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* line 333, ../scss/breakpoints/_1030up.scss */
+div#content article > section h4 {
+  color: #bdd0f6;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+/* line 341, ../scss/breakpoints/_1030up.scss */
+div#content article > section p {
+  color: white;
+  font-size: 16px;
+}
+/* line 345, ../scss/breakpoints/_1030up.scss */
+div#content article > section p > strong {
+  font-weight: bold;
+  color: #EEEEFF;
+}
+/* line 351, ../scss/breakpoints/_1030up.scss */
+div#content article > section a,
+div#content article > section a:visited {
+  color: #f0d090;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+/* line 357, ../scss/breakpoints/_1030up.scss */
+div#content article > section a:hover,
+div#content article > section a:visited:hover {
+  color: white;
+}
+/* line 362, ../scss/breakpoints/_1030up.scss */
+div#content article > section ul {
+  list-style: none inside none;
+}
+/* line 366, ../scss/breakpoints/_1030up.scss */
+div#content article > section ul > li {
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+  display: flex;
+}
+/* line 372, ../scss/breakpoints/_1030up.scss */
+div#content article > section ul > li:before {
+  content: '=E';
+  font-size: 10px;
+  letter-spacing: -2px;
+  font-weight: bold;
+  font-family: Arial;
+  color: #90b0f0;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+}
+/* line 390, ../scss/breakpoints/_1030up.scss */
+div#content article > section ol {
+  list-style: none inside none;
+  counter-reset: li-counter;
+}
+/* line 394, ../scss/breakpoints/_1030up.scss */
+div#content article > section ol > li {
+  color: white;
+  margin-left: 25px;
+  margin-bottom: 3px;
+  padding: 0;
+  position: relative;
+  height: 20px;
+}
+/* line 403, ../scss/breakpoints/_1030up.scss */
+div#content article > section ol > li:before {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  content: counter(li-counter);
+  counter-increment: li-counter;
+  align-items: center;
+  justify-content: center;
+  color: #90b0f0;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 427, ../scss/breakpoints/_1030up.scss */
+div#content article > section blockquote {
+  margin: 12px;
+  border: none;
+}
+/* line 432, ../scss/breakpoints/_1030up.scss */
+div#content article > section blockquote > p {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: normal;
+  color: #d3e0f9;
+}
+/* line 438, ../scss/breakpoints/_1030up.scss */
+div#content article > section blockquote > p:before {
+  content: '" ';
+  color: #90b0f0;
+  font-size: 28px;
+}
+/* line 444, ../scss/breakpoints/_1030up.scss */
+div#content article > section blockquote > p:after {
+  content: ' "';
+  color: #90b0f0;
+  font-size: 28px;
+}
+/* line 454, ../scss/breakpoints/_1030up.scss */
+div#content article > section code {
+  padding: 6px;
+  margin: 6px;
+  border: dashed 1px #3670e4;
+  display: block;
+}
+/* line 466, ../scss/breakpoints/_1030up.scss */
 div#content article > footer p {
   color: gray;
 }
-/* line 308, ../scss/breakpoints/_1030up.scss */
+/* line 469, ../scss/breakpoints/_1030up.scss */
 div#content article > footer p a {
   color: #f0d090;
 }
 
-/* line 319, ../scss/breakpoints/_1030up.scss */
+/* line 480, ../scss/breakpoints/_1030up.scss */
 footer.footer {
   flex: 0 0 auto;
   height: 270px;
@@ -692,7 +826,7 @@ footer.footer {
   z-index: 10;
   overflow: hidden;
 }
-/* line 329, ../scss/breakpoints/_1030up.scss */
+/* line 490, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer {
   display: flex;
   justify-content: center;
@@ -701,20 +835,20 @@ footer.footer > #inner-footer {
   overflow: hidden;
   height: 220px;
 }
-/* line 337, ../scss/breakpoints/_1030up.scss */
+/* line 498, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar {
   margin-top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-/* line 344, ../scss/breakpoints/_1030up.scss */
+/* line 505, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget {
   flex: 1;
   position: relative;
   padding-left: 36px;
 }
-/* line 349, ../scss/breakpoints/_1030up.scss */
+/* line 510, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget h4.widgettitle {
   border: none;
   font-weight: normal;
@@ -729,37 +863,38 @@ footer.footer > #inner-footer .sidebar > div.footer-widget h4.widgettitle {
   transform-origin: left bottom;
   color: #90b0f0;
   border-bottom: dashed 1px #a3b6dd;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   line-height: 30px;
   text-align: right;
+  letter-spacing: 2px;
 }
-/* line 373, ../scss/breakpoints/_1030up.scss */
+/* line 537, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul {
   margin: 0;
   padding: 0;
 }
-/* line 378, ../scss/breakpoints/_1030up.scss */
+/* line 542, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul > li {
   width: 100%;
   margin-bottom: 6px;
 }
-/* line 382, ../scss/breakpoints/_1030up.scss */
+/* line 546, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul > li a {
   color: #f0d090;
   text-decoration: none;
   transition: all 0.3s;
 }
-/* line 388, ../scss/breakpoints/_1030up.scss */
+/* line 552, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul > li a:hover {
   color: #fff8b8;
   padding-left: 5px;
 }
-/* line 398, ../scss/breakpoints/_1030up.scss */
+/* line 562, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget.widget_simpleimage {
   flex: 2;
 }
-/* line 406, ../scss/breakpoints/_1030up.scss */
+/* line 570, ../scss/breakpoints/_1030up.scss */
 footer.footer p.copyright {
   color: #0f3072;
   text-align: center;
