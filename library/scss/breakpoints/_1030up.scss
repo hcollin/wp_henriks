@@ -1,0 +1,414 @@
+/******************************************************************
+Site Name: Ravintola Henriks (www.henriks.fi)
+Author: Henrik Collin
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.wrap {
+  width: 1040px;
+}
+
+
+div#container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+header.header {
+
+  flex: 0 0 auto;
+
+  background-image: url('../images/julkisivu_vari.jpg');
+  background-position: center center;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+
+  div {
+
+    flex: 0 0 auto;
+
+    display: flex;
+    flex-direction: row;
+
+    height: 64px;
+
+    background-image: linear-gradient(rgba(0, 0, 16, 0.85) 40%, rgba(0, 0, 16, 0.00) 100%);
+
+    overflow: hidden;
+
+    & > a.logo {
+      display: block;
+      
+      flex: 0 0 auto;
+
+      background-image: url('../images/logo.png');
+      background-position: center center;
+      width: 113px;
+      height: 64px;
+      margin-left: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      border: none;
+      outline: none;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+
+
+    }
+
+    & > nav {
+      flex: 1;
+      height: 64px;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 25px;
+
+      & > ul {
+
+        display: flex;
+        flex-direction: row;
+
+        li {
+          flex: 1;
+          font-family: $header-font;
+          
+          
+          transform: rotate(-10deg);
+          transition: all 0.3s;
+          
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          min-width: 100px;
+
+          a {
+            color: complement($henriks-blue);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            padding: 0;
+            margin: 0;
+            text-shadow: 2px 2px black;
+
+            &:active, &:visited, &:link, &:link:visited {
+              text-decoration: none;
+              border: none;
+              outline: none;
+            }
+
+            &:hover {
+              text-decoration: none;
+              color: white;
+              border: none;
+              outline: none;
+            }
+            
+          }
+        }
+
+        &:focus {
+          border: none;
+          outline: none;
+
+          a: {
+            border: none;
+            outline: none;
+          }
+        }
+
+      }
+      
+    }
+  }
+
+  & > .tagline {
+
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+    height: 136px;
+
+    line-height: 136px;
+
+    padding-left: 25%;
+
+    font-family: $header-font;
+    font-size: 32px;
+    color: white;
+    text-shadow: 3px 3px 2px #083060;
+  }
+  
+}
+
+
+// This HURTS my eyes so so much...
+div#content {
+
+  flex: 1;
+
+  box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.15);
+  border-top: solid 6px rgba(0, 0, 64, 0.5);
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  // Front page sidebar
+  div.sidebar {
+    margin-top: 0;
+
+    & > .widget {
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      & > h4 {
+        margin-top: 0;
+        margin-bottom: 6px;
+        color: $henriks-blue;
+        font-family: $header-font;
+        position: relative;
+        border: none;
+        font-weight: normal;
+        font-size: 24px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: -20px;
+          top: 0;
+          background: transparent url("../images/fork.png") no-repeat center top;
+          width: 20px;
+          height: 50px;
+          background-size: 10px 50px;
+        }
+      }
+
+      & > .textwidget {
+        margin: 0;
+
+        color: white;
+        
+        // text widget with lists!
+        & >  dl {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: 0;
+
+          & > dt {
+            flex: 0 0 auto;
+            width: 30%;
+            min-width: 50px;
+            color: gray;
+          }
+
+          & > dd {
+            flex: 0 0 auto;
+            width: 70%;
+            color: white;
+            font-weight: normal;
+          }
+        }
+      }
+
+      ul.menu {
+
+        & > li {
+          position: relative;
+
+          & > a {
+            color: $henriks-blue;
+            text-decoration: none;
+            transition: all 0.5s;
+            font-size: 18px;
+
+            &:visited {
+              color: $henriks-blue;
+            }
+
+            &:hover {
+              color: $henriks-blue + 40;
+              padding-left: 25px;
+            }
+          }
+
+          &.current-menu-item {
+            
+            & > a {
+              padding-left: 25px;
+              transition: all 0.5s;
+              position: relative;
+           
+              &:before {
+                content: '';
+                width: 20px;
+                height: 12px;
+                position: absolute;
+                left: 0;
+                top: 5px;
+                background-image: url('../images/menufork.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+
+              }
+
+              &:hover {
+                padding-left: 25px;
+              }
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+
+
+  // Main Articles
+  article {
+    background-color: transparent;
+    border: none;
+
+    & > header,
+    & > section,
+    & > footer {
+      border: none;
+    }
+
+    & > header {
+      & > h1,
+      & > h1 > a {
+        color: $henriks-blue;
+      }
+
+      & > p {
+        color: gray;
+      }
+    }
+
+    & > footer {
+      p {
+        color: gray;
+
+        a {
+          color: complement($henriks-blue);
+        }
+      }
+
+      
+    }
+  }
+
+} // End of main content
+
+footer.footer {
+
+  flex: 0 0 auto;
+  height: 270px;
+  background-color: black;
+  border: none;
+  z-index: 10;
+  overflow: hidden;
+  
+  // Yhyy!
+  & > #inner-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1020px;
+    overflow: hidden;
+    height: 220px;
+
+    .sidebar {
+      margin-top: 0;
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+
+      & > div.footer-widget {
+        flex: 1;
+        position: relative;
+        padding-left: 36px;
+
+        h4.widgettitle {
+          border: none;
+          font-weight: normal;
+          transform: rotate(-90deg);
+          width: 220px;
+          height: 30px;
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          bottom: 0;
+          left: 30px;
+          transform-origin: left bottom;
+          
+          color: $henriks-blue;
+          border-bottom: dashed 1px desaturate($henriks-blue, 30); 
+          font-size: 14px;
+          text-transform: uppercase;
+          line-height: 30px;
+          text-align: right;
+
+        }
+
+        
+
+        ul {
+
+          margin: 0;
+          padding: 0;
+
+          & > li {
+            width: 100%;
+            margin-bottom: 6px;
+
+            a {
+              // color: $henriks-blue;
+              color: complement($henriks-blue);
+              text-decoration: none;
+              transition: all 0.3s;
+
+              &:hover {
+                color: complement($henriks-blue) + 40;
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+        
+
+
+        &.widget_simpleimage {
+          flex: 2;
+        }
+      }
+    }
+    
+  }
+
+  p.copyright {
+    color: darken($henriks-blue, 50);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    font-family: Verdana;
+  }
+  
+}
