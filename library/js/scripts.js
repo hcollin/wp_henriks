@@ -104,7 +104,6 @@ function loadGravatars() {
 	}
 } // end function
 
-
 /*
  * Put all your regular jQuery in here.
 */
@@ -115,6 +114,23 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
+
+  var innerHeader = $("#inner-header");
+  console.log("innerHeader", innerHeader);
+
+  innerHeader.on("click", function(e) {
+    console.log("CLICK!");
+  });
+
+  $(window).on("scroll", function(e) {
+    
+    if(this.scrollY > 150) {
+      
+      innerHeader.addClass("darker");
+    } else {
+      innerHeader.removeClass("darker");
+    }
+  });
 
 
 }); /* end of as page load scripts */

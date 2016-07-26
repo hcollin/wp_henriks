@@ -444,7 +444,7 @@ div#container {
   position: relative;
 }
 
-/* line 23, ../scss/breakpoints/_1030up.scss */
+/* line 24, ../scss/breakpoints/_1030up.scss */
 header.header {
   flex: 0 0 auto;
   background-image: url("../images/julkisivu_vari.jpg");
@@ -452,17 +452,28 @@ header.header {
   height: 200px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
 }
-/* line 34, ../scss/breakpoints/_1030up.scss */
+/* line 38, ../scss/breakpoints/_1030up.scss */
 header.header div {
   flex: 0 0 auto;
   display: flex;
   flex-direction: row;
   height: 64px;
   background-image: linear-gradient(rgba(0, 0, 16, 0.85) 40%, rgba(0, 0, 16, 0) 100%);
-  overflow: hidden;
 }
-/* line 47, ../scss/breakpoints/_1030up.scss */
+/* line 51, ../scss/breakpoints/_1030up.scss */
+header.header div.fixed-header {
+  position: fixed;
+  z-index: 1000;
+}
+/* line 55, ../scss/breakpoints/_1030up.scss */
+header.header div.fixed-header.darker {
+  background-image: linear-gradient(#000010 0%, rgba(0, 0, 16, 0.95) 40%, rgba(0, 0, 16, 0.75) 80%, rgba(0, 0, 16, 0) 100%);
+}
+/* line 61, ../scss/breakpoints/_1030up.scss */
 header.header div > a.logo {
   display: block;
   flex: 0 0 auto;
@@ -476,25 +487,27 @@ header.header div > a.logo {
   border: none;
   outline: none;
 }
-/* line 63, ../scss/breakpoints/_1030up.scss */
+/* line 77, ../scss/breakpoints/_1030up.scss */
 header.header div > a.logo:focus {
   border: none;
   outline: none;
 }
-/* line 71, ../scss/breakpoints/_1030up.scss */
+/* line 85, ../scss/breakpoints/_1030up.scss */
 header.header div > nav {
   flex: 1;
-  height: 64px;
+  height: 85px;
   display: flex;
   justify-content: flex-end;
   padding-right: 25px;
+  align-items: flex-start;
+  overflow: hidden;
 }
-/* line 78, ../scss/breakpoints/_1030up.scss */
+/* line 95, ../scss/breakpoints/_1030up.scss */
 header.header div > nav > ul {
   display: flex;
   flex-direction: row;
 }
-/* line 83, ../scss/breakpoints/_1030up.scss */
+/* line 100, ../scss/breakpoints/_1030up.scss */
 header.header div > nav > ul li {
   flex: 1;
   font-family: "Alice", Times New Roman, serif;
@@ -505,8 +518,13 @@ header.header div > nav > ul li {
   justify-content: center;
   text-align: center;
   min-width: 100px;
+  min-height: 64px;
+  border-left: dashed 1px rgba(255, 255, 255, 0.5);
+  border-bottom: dashed 1px rgba(255, 255, 255, 0.5);
+  border-bottom-left-radius: 3px;
+  padding: 0 10px;
 }
-/* line 97, ../scss/breakpoints/_1030up.scss */
+/* line 119, ../scss/breakpoints/_1030up.scss */
 header.header div > nav > ul li a {
   color: #f0d090;
   text-decoration: none;
@@ -516,65 +534,107 @@ header.header div > nav > ul li a {
   margin: 0;
   text-shadow: 2px 2px black;
 }
-/* line 106, ../scss/breakpoints/_1030up.scss */
+/* line 128, ../scss/breakpoints/_1030up.scss */
 header.header div > nav > ul li a:active, header.header div > nav > ul li a:visited, header.header div > nav > ul li a:link, header.header div > nav > ul li a:link:visited {
   text-decoration: none;
   border: none;
   outline: none;
 }
-/* line 112, ../scss/breakpoints/_1030up.scss */
+/* line 134, ../scss/breakpoints/_1030up.scss */
 header.header div > nav > ul li a:hover {
   text-decoration: none;
   color: white;
   border: none;
   outline: none;
 }
-/* line 122, ../scss/breakpoints/_1030up.scss */
+/* line 143, ../scss/breakpoints/_1030up.scss */
+header.header div > nav > ul li.current-menu-item, header.header div > nav > ul li.current-page-ancestor {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 148, ../scss/breakpoints/_1030up.scss */
+header.header div > nav > ul li.current-menu-item > a, header.header div > nav > ul li.current-page-ancestor > a {
+  color: white;
+}
+/* line 154, ../scss/breakpoints/_1030up.scss */
 header.header div > nav > ul:focus {
   border: none;
   outline: none;
   a-border: none;
   a-outline: none;
 }
-/* line 137, ../scss/breakpoints/_1030up.scss */
+/* line 169, ../scss/breakpoints/_1030up.scss */
 header.header > .tagline {
   flex: 0 0 auto;
   margin: 0;
   padding: 0;
-  height: 136px;
-  line-height: 136px;
-  padding-left: 25%;
+  height: 200px;
+  padding-top: 100px;
+  padding-left: 260px;
+  width: 1040px;
   font-family: "Alice", Times New Roman, serif;
   font-size: 32px;
   color: white;
   text-shadow: 3px 3px 2px #083060;
 }
+/* line 187, ../scss/breakpoints/_1030up.scss */
+header.header.frontpage {
+  height: 400px;
+  background-image: url("../images/julkisivu_vari.jpg");
+  position: relative;
+  width: 1040px;
+}
+/* line 193, ../scss/breakpoints/_1030up.scss */
+header.header.frontpage a.logo {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  width: 300px;
+  height: 180px;
+  background-image: url("../images/logo.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 205, ../scss/breakpoints/_1030up.scss */
+header.header.frontpage > .tagline {
+  display: none;
+}
 
-/* line 158, ../scss/breakpoints/_1030up.scss */
+/* line 213, ../scss/breakpoints/_1030up.scss */
 div#content {
   flex: 1;
   box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.15);
-  border-top: solid 6px rgba(0, 0, 64, 0.5);
+  border-top: solid 5px rgba(144, 176, 240, 0.2);
   margin-top: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  z-index: 20;
 }
-/* line 169, ../scss/breakpoints/_1030up.scss */
+/* line 226, ../scss/breakpoints/_1030up.scss */
+div#content #main.fixed-sidebar-left {
+  margin-left: 300px;
+}
+/* line 234, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar {
   margin-top: 0;
 }
-/* line 172, ../scss/breakpoints/_1030up.scss */
+/* line 237, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar.fixed {
+  position: fixed;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 245, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget {
   padding-left: 35px;
   padding-right: 20px;
   position: relative;
   min-height: 125px;
 }
-/* line 179, ../scss/breakpoints/_1030up.scss */
+/* line 252, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget:first-of-type {
   margin-top: 0;
 }
-/* line 183, ../scss/breakpoints/_1030up.scss */
+/* line 256, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > h4 {
   position: absolute;
   bottom: 0;
@@ -594,88 +654,121 @@ div#content div.sidebar > .widget > h4 {
   font-weight: normal;
   letter-spacing: 2px;
 }
-/* line 212, ../scss/breakpoints/_1030up.scss */
+/* line 285, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget {
   margin: 0;
   color: white;
 }
-/* line 218, ../scss/breakpoints/_1030up.scss */
+/* line 291, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget > dl {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
 }
-/* line 224, ../scss/breakpoints/_1030up.scss */
+/* line 297, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget > dl > dt {
   flex: 0 0 auto;
   width: 30%;
   min-width: 50px;
   color: gray;
 }
-/* line 231, ../scss/breakpoints/_1030up.scss */
+/* line 304, ../scss/breakpoints/_1030up.scss */
 div#content div.sidebar > .widget > .textwidget > dl > dd {
   flex: 0 0 auto;
   width: 70%;
   color: white;
   font-weight: normal;
 }
-/* line 242, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li {
+/* line 313, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget > .textwidget > h2.link-button {
+  position: relative;
+  left: -30px;
+  width: calc(100% + 30px);
+  text-align: center;
+  padding: 4px 0;
+  border: dashed 1px #f0d090;
+  margin: 0px 5px 15px 5px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* line 326, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget > .textwidget > h2.link-button a {
+  color: #f0d090;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+/* line 333, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget > .textwidget > h2.link-button a:hover {
+  color: white;
+}
+/* line 344, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget ul.menu > li,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li {
   position: relative;
 }
-/* line 245, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li > a {
+/* line 347, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget ul.menu > li > a,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li > a {
   color: #f0d090;
   text-decoration: none;
   transition: all 0.3s;
   font-size: 18px;
 }
-/* line 251, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li > a:visited {
+/* line 353, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget ul.menu > li > a:visited,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li > a:visited {
   color: #f0d090;
 }
-/* line 256, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li > a:hover {
+/* line 358, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget ul.menu > li > a:hover,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li > a:hover {
   color: white;
   padding-left: 5px;
 }
-/* line 264, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li.current-menu-item > a {
+/* line 367, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget ul.menu > li.current_page_item > a, div#content div.sidebar > .widget ul.menu > li.current-menu-item > a,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li.current_page_item > a,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li.current-menu-item > a {
   padding-left: 5px;
   transition: all 0.3s;
   position: relative;
   color: #fcf6ea;
 }
-/* line 270, ../scss/breakpoints/_1030up.scss */
-div#content div.sidebar > .widget ul.menu > li.current-menu-item > a:hover {
+/* line 373, ../scss/breakpoints/_1030up.scss */
+div#content div.sidebar > .widget ul.menu > li.current_page_item > a:hover, div#content div.sidebar > .widget ul.menu > li.current-menu-item > a:hover,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li.current_page_item > a:hover,
+div#content div.sidebar > .widget ul.child-sidebar-menu > li.current-menu-item > a:hover {
   padding-left: 5px;
 }
-/* line 284, ../scss/breakpoints/_1030up.scss */
+/* line 387, ../scss/breakpoints/_1030up.scss */
 div#content article {
   background-color: transparent;
   border: none;
 }
-/* line 288, ../scss/breakpoints/_1030up.scss */
+/* line 391, ../scss/breakpoints/_1030up.scss */
 div#content article > header, div#content article > section, div#content article > footer {
   border: none;
 }
-/* line 296, ../scss/breakpoints/_1030up.scss */
+/* line 399, ../scss/breakpoints/_1030up.scss */
 div#content article > header > h1, div#content article > header > h1 > a {
   color: #90b0f0;
 }
-/* line 301, ../scss/breakpoints/_1030up.scss */
+/* line 404, ../scss/breakpoints/_1030up.scss */
 div#content article > header > p {
   color: gray;
 }
-/* line 309, ../scss/breakpoints/_1030up.scss */
+/* line 412, ../scss/breakpoints/_1030up.scss */
 div#content article > section h1 {
   color: #90b0f0;
   font-size: 28px;
   font-weight: normal;
   letter-spacing: 1px;
 }
-/* line 317, ../scss/breakpoints/_1030up.scss */
+/* line 420, ../scss/breakpoints/_1030up.scss */
 div#content article > section h2 {
   color: #90b0f0;
   font-size: 22px;
@@ -683,14 +776,14 @@ div#content article > section h2 {
   font-weight: normal;
   letter-spacing: 2px;
 }
-/* line 325, ../scss/breakpoints/_1030up.scss */
+/* line 428, ../scss/breakpoints/_1030up.scss */
 div#content article > section h3 {
   color: #a6c0f3;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px;
 }
-/* line 333, ../scss/breakpoints/_1030up.scss */
+/* line 436, ../scss/breakpoints/_1030up.scss */
 div#content article > section h4 {
   color: #bdd0f6;
   font-size: 16px;
@@ -698,40 +791,40 @@ div#content article > section h4 {
   font-weight: normal;
   letter-spacing: 2px;
 }
-/* line 341, ../scss/breakpoints/_1030up.scss */
+/* line 444, ../scss/breakpoints/_1030up.scss */
 div#content article > section p {
   color: white;
   font-size: 16px;
 }
-/* line 345, ../scss/breakpoints/_1030up.scss */
+/* line 448, ../scss/breakpoints/_1030up.scss */
 div#content article > section p > strong {
   font-weight: bold;
-  color: #EEEEFF;
+  letter-spacing: 1px;
 }
-/* line 351, ../scss/breakpoints/_1030up.scss */
+/* line 455, ../scss/breakpoints/_1030up.scss */
 div#content article > section a,
 div#content article > section a:visited {
   color: #f0d090;
   text-decoration: none;
   transition: all 0.3s;
 }
-/* line 357, ../scss/breakpoints/_1030up.scss */
+/* line 461, ../scss/breakpoints/_1030up.scss */
 div#content article > section a:hover,
 div#content article > section a:visited:hover {
   color: white;
 }
-/* line 362, ../scss/breakpoints/_1030up.scss */
+/* line 466, ../scss/breakpoints/_1030up.scss */
 div#content article > section ul {
   list-style: none inside none;
 }
-/* line 366, ../scss/breakpoints/_1030up.scss */
+/* line 470, ../scss/breakpoints/_1030up.scss */
 div#content article > section ul > li {
   color: white;
   margin-left: 10px;
   font-size: 16px;
   display: flex;
 }
-/* line 372, ../scss/breakpoints/_1030up.scss */
+/* line 476, ../scss/breakpoints/_1030up.scss */
 div#content article > section ul > li:before {
   content: '=E';
   font-size: 10px;
@@ -746,12 +839,12 @@ div#content article > section ul > li:before {
   align-self: center;
   justify-content: flex-start;
 }
-/* line 390, ../scss/breakpoints/_1030up.scss */
+/* line 494, ../scss/breakpoints/_1030up.scss */
 div#content article > section ol {
   list-style: none inside none;
   counter-reset: li-counter;
 }
-/* line 394, ../scss/breakpoints/_1030up.scss */
+/* line 498, ../scss/breakpoints/_1030up.scss */
 div#content article > section ol > li {
   color: white;
   margin-left: 25px;
@@ -760,7 +853,7 @@ div#content article > section ol > li {
   position: relative;
   height: 20px;
 }
-/* line 403, ../scss/breakpoints/_1030up.scss */
+/* line 507, ../scss/breakpoints/_1030up.scss */
 div#content article > section ol > li:before {
   display: flex;
   position: absolute;
@@ -777,56 +870,85 @@ div#content article > section ol > li:before {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 427, ../scss/breakpoints/_1030up.scss */
+/* line 531, ../scss/breakpoints/_1030up.scss */
 div#content article > section blockquote {
   margin: 12px;
   border: none;
 }
-/* line 432, ../scss/breakpoints/_1030up.scss */
+/* line 536, ../scss/breakpoints/_1030up.scss */
 div#content article > section blockquote > p {
   font-size: 20px;
   font-style: italic;
   font-weight: normal;
   color: #d3e0f9;
 }
-/* line 438, ../scss/breakpoints/_1030up.scss */
+/* line 542, ../scss/breakpoints/_1030up.scss */
 div#content article > section blockquote > p:before {
   content: '" ';
   color: #90b0f0;
   font-size: 28px;
 }
-/* line 444, ../scss/breakpoints/_1030up.scss */
+/* line 548, ../scss/breakpoints/_1030up.scss */
 div#content article > section blockquote > p:after {
   content: ' "';
   color: #90b0f0;
   font-size: 28px;
 }
-/* line 454, ../scss/breakpoints/_1030up.scss */
+/* line 556, ../scss/breakpoints/_1030up.scss */
 div#content article > section code {
   padding: 6px;
   margin: 6px;
   border: dashed 1px #3670e4;
   display: block;
 }
-/* line 466, ../scss/breakpoints/_1030up.scss */
+/* line 568, ../scss/breakpoints/_1030up.scss */
 div#content article > footer p {
   color: gray;
 }
-/* line 469, ../scss/breakpoints/_1030up.scss */
+/* line 571, ../scss/breakpoints/_1030up.scss */
 div#content article > footer p a {
   color: #f0d090;
 }
+/* line 583, ../scss/breakpoints/_1030up.scss */
+div#content.frontpage .sidebar {
+  position: relative;
+  top: -160px;
+  background-color: black;
+  padding-top: 20px;
+}
+/* line 593, ../scss/breakpoints/_1030up.scss */
+div#content.frontpage .sidebar:before {
+  content: '';
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 80%);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  height: 5px;
+  width: 100%;
+  border-top-left-radius: 10px;
+}
+/* line 608, ../scss/breakpoints/_1030up.scss */
+div#content.frontpage .sidebar:after {
+  content: '';
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 5px;
+  height: 150px;
+}
 
-/* line 480, ../scss/breakpoints/_1030up.scss */
+/* line 624, ../scss/breakpoints/_1030up.scss */
 footer.footer {
   flex: 0 0 auto;
   height: 270px;
   background-color: black;
   border: none;
-  z-index: 10;
+  z-index: 30;
   overflow: hidden;
+  position: relative;
 }
-/* line 490, ../scss/breakpoints/_1030up.scss */
+/* line 635, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer {
   display: flex;
   justify-content: center;
@@ -835,20 +957,20 @@ footer.footer > #inner-footer {
   overflow: hidden;
   height: 220px;
 }
-/* line 498, ../scss/breakpoints/_1030up.scss */
+/* line 643, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar {
   margin-top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-/* line 505, ../scss/breakpoints/_1030up.scss */
+/* line 650, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget {
   flex: 1;
   position: relative;
   padding-left: 36px;
 }
-/* line 510, ../scss/breakpoints/_1030up.scss */
+/* line 655, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget h4.widgettitle {
   border: none;
   font-weight: normal;
@@ -869,34 +991,34 @@ footer.footer > #inner-footer .sidebar > div.footer-widget h4.widgettitle {
   text-align: right;
   letter-spacing: 2px;
 }
-/* line 537, ../scss/breakpoints/_1030up.scss */
+/* line 682, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul {
   margin: 0;
   padding: 0;
 }
-/* line 542, ../scss/breakpoints/_1030up.scss */
+/* line 687, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul > li {
   width: 100%;
   margin-bottom: 6px;
 }
-/* line 546, ../scss/breakpoints/_1030up.scss */
+/* line 691, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul > li a {
   color: #f0d090;
   text-decoration: none;
   transition: all 0.3s;
 }
-/* line 552, ../scss/breakpoints/_1030up.scss */
+/* line 697, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget ul > li a:hover {
   color: #fff8b8;
   padding-left: 5px;
 }
-/* line 562, ../scss/breakpoints/_1030up.scss */
+/* line 707, ../scss/breakpoints/_1030up.scss */
 footer.footer > #inner-footer .sidebar > div.footer-widget.widget_simpleimage {
   flex: 2;
 }
-/* line 570, ../scss/breakpoints/_1030up.scss */
+/* line 715, ../scss/breakpoints/_1030up.scss */
 footer.footer p.copyright {
-  color: #0f3072;
+  color: #222222;
   text-align: center;
   padding: 10px 0;
   font-size: 12px;

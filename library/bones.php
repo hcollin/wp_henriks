@@ -196,10 +196,11 @@ function bones_theme_support() {
 			'link',              // quick link to other site
 			'image',             // an image
 			'quote',             // a quick quote
-			'status',            // a Facebook like status update
-			'video',             // video
-			'audio',             // audio
-			'chat'               // chat transcript
+			// 'status',            // a Facebook like status update
+			// 'video',             // video
+			// 'audio',             // audio
+			// 'chat',              // chat transcript
+			'dish'				 // dish served in the restaurant
 		)
 	);
 

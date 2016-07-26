@@ -28,7 +28,8 @@ function bones_ahoy() {
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  // require_once( 'library/custom-post-type.php' );
+  require_once( 'library/dish-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -156,9 +157,29 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __( 'Homepage Sidebar', 'bonestheme' ),
-		'description' => __( 'Etusivun oikean reunan sisältö', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'name' => __( 'FP right column', 'bonestheme' ),
+		'description' => __( 'Etusivun oikea sarake', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget fp-right-column %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+  register_sidebar(array(
+		'id' => 'frontpage_left',
+		'name' => __( 'FP left column', 'bonestheme' ),
+		'description' => __( 'Etusivun vasen sarake', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget fp-left-column %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+  register_sidebar(array(
+		'id' => 'frontpage_middle',
+		'name' => __( 'FP middle column', 'bonestheme' ),
+		'description' => __( 'Etusivun keski sarake', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget fp-middle-column %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
@@ -168,6 +189,16 @@ function bones_register_sidebars() {
 		'id' => 'sidebarmenu',
 		'name' => __( 'Menu Sidebar', 'bonestheme' ),
 		'description' => __( 'Menun alivalikko', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+  register_sidebar(array(
+		'id' => 'nav2nd',
+		'name' => __( '2nd Level navigation', 'bonestheme' ),
+		'description' => __( 'Toisen tason navigaatio', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

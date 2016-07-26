@@ -1,10 +1,19 @@
-<?php get_header(); ?>
+<?php
+/*
+ Template Name: Front Page Template
+ *
+ * The Template that is used in the front page
+*/
+?>
 
-			<div id="content">
+
+<?php get_header('frontpage'); ?>
+
+			<div id="content" class="frontpage">
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="frontpage m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -56,9 +65,36 @@
 
 							<?php endwhile; endif; ?>
 
+							<div id="fp-left-column" class="fp-column left-column m-all t-1of3 d-2of7 first-col cf" role="complementary">
+
+								<?php if ( is_active_sidebar( 'frontpage_left' ) ) : ?>
+
+									<?php dynamic_sidebar( 'frontpage_left' ); ?>
+
+								<?php else : ?>
+
+								<?php endif; ?>
+
+							</div>
+
+							<div id="fp-middle-column" class="fp-column middle-column m-all t-1of3 d-3of7 cf" role="complementary">
+
+								<?php if ( is_active_sidebar( 'frontpage_middle' ) ) : ?>
+
+									<?php dynamic_sidebar( 'frontpage_middle' ); ?>
+
+								<?php else : ?>
+
+								<?php endif; ?>
+
+							</div>
+
+
+
+
 						</main>
 
-						<!-- <?php //get_sidebar(); ?> -->
+						<?php get_sidebar(); ?>
 
 				</div>
 
